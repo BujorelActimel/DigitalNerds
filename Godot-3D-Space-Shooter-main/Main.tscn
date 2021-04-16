@@ -16,16 +16,6 @@ ambient_light_energy = 1.58
 glow_enabled = true
 glow_bloom = 0.2
 
-[sub_resource type="DynamicFontData" id=3]
-font_path = "res://FontsFree-Net-Montserrat-Medium.ttf"
-
-[sub_resource type="DynamicFont" id=4]
-size = 22
-font_data = SubResource( 3 )
-
-[sub_resource type="Theme" id=5]
-default_font = SubResource( 4 )
-
 [node name="Main" type="Spatial"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -53,7 +43,6 @@ layer = 100
 
 [node name="Pause" type="Control" parent="CanvasLayer"]
 pause_mode = 2
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 5 )
@@ -79,6 +68,11 @@ margin_bottom = 42.6228
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "You killed: 0"
 script = ExtResource( 5 )
+[node name="BlackOverLAy" type="ColorRect" parent="CanvasLayer/Pause"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.231373 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
