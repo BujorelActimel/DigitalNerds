@@ -17,6 +17,8 @@ func _on_Area_body_entered(body):
 		explodeSound.play()
 		visible = false
 		$Area/CollisionShape.disabled = true
+		#countKills += 1
+		#print(countKills)
 
 func _on_LightTimer_timeout():
 	$OmniLight.visible = false
