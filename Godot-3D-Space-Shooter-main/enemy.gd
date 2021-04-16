@@ -2,8 +2,8 @@ extends KinematicBody
 
 var spd = rand_range(20,50)
 
-const COOLDOWN = 1
-var cooldown = 1
+const COOLDOWN = 2
+var cooldown = 2
 
 onready var main = get_tree().current_scene
 var Bullet = load("res://Bullet.tscn")
@@ -21,5 +21,5 @@ func _physics_process(delta):
 		var bullet = Bullet.instance()
 		main.add_child(bullet)
 		bullet.transform = $Gun.global_transform
-		bullet.velo = bullet.transform.basis.z * -600
+		bullet.velo = bullet.transform.basis.z * -100
 		bullet.playerBullet = false

@@ -1,3 +1,3 @@
-extends Label
+extends Control
 
 var score = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Blender Imports/Wing Blue.material" type="Material" id=1]
 [ext_resource path="res://Blender Imports/Base Gray.material" type="Material" id=2]
@@ -60,7 +60,12 @@ surfaces/3 = {
 "vertex_count": 16
 }
 
-[node name="player" type="KinematicBody"]
+[sub_resource type="BoxShape" id=2]
+extents = Vector3( 4.83272, 1, 2.93059 )
+
+[node name="player" type="KinematicBody" groups=[
+"Player",
+]]
 script = ExtResource( 5 )
 
 [node name="PlayerMesh" type="MeshInstance" parent="."]
@@ -88,3 +93,6 @@ billboard = 1
 texture = ExtResource( 7 )
 
 [node name="Particles" parent="." instance=ExtResource( 8 )]
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 2 )
