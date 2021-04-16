@@ -51,7 +51,7 @@ extents = Vector3( 1.98814, 1.70537, 1.33083 )
 [node name="enemy" type="KinematicBody" groups=[
 "Enemies",
 ]]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
+transform = Transform( -2, 0, 6.51683e-07, 0, 2, 0, -6.51683e-07, 0, -2, 0, 0, 0 )
 script = ExtResource( 4 )
 
 [node name="EnemyMesh" type="MeshInstance" parent="."]
@@ -66,3 +66,6 @@ shape = SubResource( 2 )
 
 [node name="Particles" parent="." instance=ExtResource( 5 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0250329, 1.70716 )
+
+[node name="Gun" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7.5 )
